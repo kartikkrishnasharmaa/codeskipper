@@ -1,9 +1,0 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/main/about": "pages/main/about.js",
-  "/glossary": "pages/glossary.js",
-  "/main/advertise": "pages/main/advertise.js",
-  "/main/career": "pages/main/career.js"
-}
