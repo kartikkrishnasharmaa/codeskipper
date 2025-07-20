@@ -7,8 +7,6 @@ export default function Home() {
     <SimpleLayout>
       <Hero/>
       <Feature/>
-            <h1 className="sr-only">Learn Programming with UCP</h1>
-
     </SimpleLayout>
   );
 }
