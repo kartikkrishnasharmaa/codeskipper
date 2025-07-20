@@ -29,7 +29,7 @@ const privacypolicy = () => {
         <title>Test Your Computer Knowledge | Unstop Computer</title>
         <meta
           name="description"
-          content="This privacy policy explains how we use and protect any information that you provide when you use this website."
+          content="This privacy policy explains. how we use and protect any information that you provide when you use this website."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
