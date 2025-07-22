@@ -11,7 +11,7 @@ export default function JSCompilerPage() {
 function add(a, b) {
   return a + b;
 }
-console.log("Sum:", add(5, 10));`);
+console.log(add(5, 10));`);
   const [output, setOutput] = useState("");
   const [theme, setTheme] = useState("vs-dark");
   const [layout, setLayout] = useState("horizontal");
