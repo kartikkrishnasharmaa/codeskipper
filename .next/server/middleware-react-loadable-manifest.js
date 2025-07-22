@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"main/javascript.jsx -> @monaco-editor/react\":{\"id\":\"main/javascript.jsx -> @monaco-editor/react\",\"files\":[\"static/chunks/node_modules_monaco-editor_react_dist_index_mjs.js\"]},\"main/python.jsx -> @monaco-editor/react\":{\"id\":\"main/python.jsx -> @monaco-editor/react\",\"files\":[\"static/chunks/node_modules_monaco-editor_react_dist_index_mjs.js\"]}}"

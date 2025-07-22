@@ -2,5 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/main/python": "pages/main/python.js",
+  "/main/javascript": "pages/main/javascript.js",
+  "/main/compiler": "pages/main/compiler.js",
   "/": "pages/index.js"
 }

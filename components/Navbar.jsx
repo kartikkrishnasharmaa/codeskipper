@@ -125,7 +125,7 @@ export default function Navbar({ setSidebarOpen }) {
     { name: "MCQ", path: "/mcq" },
     { name: "Test", path: "/test" },
     { name: "Interview Preparation", path: "/interview-question" },
-    { name: "Online Compiler", path: "/compiler/index.html" },
+    { name: "Online Compiler", path: "/main/compiler" },
   ];
 
   const container = {
