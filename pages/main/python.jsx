@@ -10,7 +10,7 @@ export default function PythonCompiler() {
   const [pyodide, setPyodide] = useState(null);
   const [code, setCode] = useState(`# Python Compiler Example
 def greet(name):
-    return f"Hello, {name}"
+    return "Hello, {name}"
 
 print(greet("User"))`);
   const [output, setOutput] = useState("");

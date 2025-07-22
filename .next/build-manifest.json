@@ -27,15 +27,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/main/javascript": [
+    "/main/compiler": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/main/javascript.js"
-    ],
-    "/main/python": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/main/python.js"
+      "static/chunks/pages/main/compiler.js"
     ]
   },
   "ampFirstPages": []
