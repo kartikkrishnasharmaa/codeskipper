@@ -2,7 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/main/compiler": "pages/main/compiler.js",
-  "/main/javascript": "pages/main/javascript.js"
+  "/mcq/angularjs-mcq": "pages/mcq/angularjs-mcq.js",
+  "/main/compiler": "pages/main/compiler.js"
 }
