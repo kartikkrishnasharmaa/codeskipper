@@ -9,10 +9,14 @@ const MonacoEditor = dynamic(() => import("@monaco-editor/react"), { ssr: false 
 export default function PythonCompiler() {
   const [pyodide, setPyodide] = useState(null);
   const [code, setCode] = useState(`# Python Compiler Example
-def greet(name):
-    return "Hello, {name}"
+number = -5
 
-print(greet("User"))`);
+if number >= 0:
+    print("The number is positive.")
+else:
+    print("The number is negative.")
+
+`);
   const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(true);
   const [theme, setTheme] = useState("vs-dark");
