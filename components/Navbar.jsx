@@ -121,7 +121,7 @@ export default function Navbar({ setSidebarOpen }) {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Computer Dictionary", path: "/glossary" },
-    { name: "Roadmap", path: "/blog" },
+    { name: "Roadmap", path: "/roadmap" },
     { name: "MCQ", path: "/mcq" },
     { name: "Test", path: "/test" },
     { name: "Interview Preparation", path: "/interview-question" },

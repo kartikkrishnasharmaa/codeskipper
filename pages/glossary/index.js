@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React, { useState } from "react";
+import SimpleLayout from "@/components/SimpleLayout";
 
 const GlossaryTable = () => {
   const termsData = [
@@ -1031,539 +1032,657 @@ const GlossaryTable = () => {
       description:
         "Software or hardware used to secure cyber-physical systems.",
     },
-      {
-          "keyword": "Database",
-          "description": "An organized collection of structured data stored electronically in a computer system."
-      },
-      {
-          "keyword": "Data Structure",
-          "description": "A specialized format for organizing, processing, retrieving and storing data (e.g., arrays, linked lists)."
-      },
-      {
-          "keyword": "Debugging",
-          "description": "The process of identifying and removing errors from computer hardware or software."
-      },
-      {
-          "keyword": "Deep Learning",
-          "description": "A subset of machine learning using artificial neural networks with multiple abstraction layers."
-      },
-      {
-          "keyword": "DNS (Domain Name System)",
-          "description": "The hierarchical naming system that translates domain names to IP addresses."
-      },
-      {
-          "keyword": "Distributed System",
-          "description": "A system whose components are located on networked computers that communicate to achieve a common goal."
-      },
-      {
-          "keyword": "Docker",
-          "description": "A platform for developing, shipping, and running applications in containers."
-      },
-      {
-          "keyword": "Data Mining",
-          "description": "The process of discovering patterns in large datasets using machine learning, statistics, and database systems."
-      },
-      {
-          "keyword": "Dijkstra's Algorithm",
-          "description": "An algorithm for finding the shortest paths between nodes in a graph."
-      },
-      {
-          "keyword": "Dynamic Programming",
-          "description": "A method for solving complex problems by breaking them down into simpler subproblems."
-      },
-      {
-          "keyword": "Data Warehouse",
-          "description": "A central repository of integrated data from one or more disparate sources."
-      },
-      {
-          "keyword": "DevOps",
-          "description": "A set of practices combining software development (Dev) and IT operations (Ops)."
-      },
-      {
-          "keyword": "Digital Signature",
-          "description": "A mathematical scheme for verifying the authenticity of digital messages or documents."
-      },
-      {
-          "keyword": "DDoS (Distributed Denial of Service)",
-          "description": "A cyberattack where multiple systems flood a target's resources to disrupt service."
-      },
-      {
-          "keyword": "Dart",
-          "description": "A client-optimized programming language developed by Google for building mobile, desktop and web apps."
-      },
-      {
-          "keyword": "Data Science",
-          "description": "An interdisciplinary field using scientific methods to extract knowledge from structured/unstructured data."
-      },
-      {
-          "keyword": "Dependency Injection",
-          "description": "A design pattern where an object receives other objects it depends on (inversion of control)."
-      },
-      {
-          "keyword": "Django",
-          "description": "A high-level Python web framework encouraging rapid development and clean design."
-      },
-      {
-          "keyword": "Docker Compose",
-          "description": "A tool for defining and running multi-container Docker applications."
-      },
-      {
-          "keyword": "Data Lake",
-          "description": "A storage repository holding vast amounts of raw data in native format."
-      },
-      {
-          "keyword": "Dual Stack",
-          "description": "A networking architecture allowing hosts to simultaneously communicate via IPv4 and IPv6."
-      },
-      {
-          "keyword": "Deadlock",
-          "description": "A situation where processes block each other by holding resources needed by another."
-      },
-      {
-          "keyword": "DynamoDB",
-          "description": "Amazon's fully managed NoSQL database service."
-      },
-      {
-          "keyword": "Data Modeling",
-          "description": "The process of creating a data model for an information system."
-      },
-      {
-          "keyword": "Design Pattern",
-          "description": "A general reusable solution to commonly occurring problems in software design."
-      },
-      {
-          "keyword": "Dart VM",
-          "description": "The virtual machine that executes Dart code and provides runtime support."
-      },
-      {
-          "keyword": "Data Pipeline",
-          "description": "A set of data processing elements connected in series for automated data flow."
-      },
-      {
-          "keyword": "Differential Privacy",
-          "description": "A system for publicly sharing data while withholding information about individuals."
-      },
-      {
-          "keyword": "Directive (Programming)",
-          "description": "A language construct specifying how a compiler should process input (e.g., #include in C)."
-      },
-      {
-          "keyword": "Domain-Driven Design (DDD)",
-          "description": "An approach to software development focusing on complex needs by connecting implementation to an evolving model."
-      },
-      {
-          "keyword": "Data Governance",
-          "description": "The overall management of availability, usability, integrity, and security of enterprise data."
-      },
-      {
-          "keyword": "Dependency Graph",
-          "description": "A directed graph representing dependencies of several objects toward each other."
-      },
-      {
-          "keyword": "Deterministic Algorithm",
-          "description": "An algorithm that, given a particular input, will always produce the same output."
-      },
-      {
-          "keyword": "Durable (ACID)",
-          "description": "A database property where committed transactions persist even after system failures."
-      },
-      {
-          "keyword": "Data Integrity",
-          "description": "The maintenance and assurance of data accuracy and consistency over its lifecycle."
-      },
-      {
-          "keyword": "Datalog",
-          "description": "A declarative logic programming language for querying databases."
-      },
-      {
-          "keyword": "Declarative Programming",
-          "description": "A paradigm expressing the logic of computation without describing control flow (e.g., SQL)."
-      },
-      {
-          "keyword": "Docker Swarm",
-          "description": "Docker's native clustering and orchestration tool."
-      },
-      {
-          "keyword": "Dataframe",
-          "description": "A 2D labeled data structure with columns of potentially different types (Pandas, R)."
-      },
-      {
-          "keyword": "Dynamic Typing",
-          "description": "A language feature where type checking is performed at runtime (e.g., Python, JavaScript)."
-      },
-      {
-          "keyword": "Denormalization",
-          "description": "A database optimization technique adding redundant data to improve read performance."
-      },
-      {
-          "keyword": "Dual Core",
-          "description": "A CPU with two complete execution cores per physical processor."
-      },
-      {
-          "keyword": "Data Dictionary",
-          "description": "A centralized repository of information about data such as meaning, relationships, origin, usage."
-      },
-      {
-          "keyword": "Dimensional Modeling",
-          "description": "A data structure technique optimized for data warehousing tools."
-      },
-      {
-          "keyword": "Duck Typing",
-          "description": "A style of dynamic typing where an object's suitability is determined by presence of methods/properties."
-      },
-      {
-          "keyword": "Dockerfile",
-          "description": "A text document containing commands to assemble a Docker image."
-      },
-      {
-          "keyword": "Data Cleansing",
-          "description": "The process of detecting and correcting corrupt or inaccurate records from datasets."
-      },
-      {
-          "keyword": "Depth-First Search (DFS)",
-          "description": "A graph traversal algorithm exploring as far as possible along each branch before backtracking."
-      },
-      {
-          "keyword": "Deployment",
-          "description": "The activities making a software system available for use."
-      },
-      {
-          "keyword": "Data Serialization",
-          "description": "The process of converting data structures into a storable/transmittable format (e.g., JSON, Protocol Buffers)."
-      },
-      {
-          "keyword": "DMA (Direct Memory Access)",
-          "description": "A feature allowing hardware subsystems to access memory independently of the CPU."
-      },
-      {
-          "keyword": "Data Federation",
-          "description": "An approach integrating multiple databases into a virtual database."
-      },
-      {
-          "keyword": "Dart Native",
-          "description": "Dart code compiled to native machine code for mobile/desktop apps."
-      },
-      {
-          "keyword": "Discrete Mathematics",
-          "description": "Mathematical structures fundamentally discrete rather than continuous (essential for CS)."
-      },
-      {
-          "keyword": "Data Replication",
-          "description": "The process of storing data in multiple locations to improve availability and fault tolerance."
-      },
-      {
-          "keyword": "Dependency Management",
-          "description": "Tools and processes for handling external libraries/packages a project relies on."
-      },
-      {
-          "keyword": "Dart Web",
-          "description": "Dart code compiled to JavaScript for web applications."
-      },
-      {
-          "keyword": "Data Masking",
-          "description": "A technique creating structurally similar but inauthentic data for privacy protection."
-      },
-      {
-          "keyword": "Deterministic Finite Automaton (DFA)",
-          "description": "A finite state machine accepting/rejecting strings of symbols by running through a state sequence."
-      },
-      {
-          "keyword": "Data Wrangling",
-          "description": "The process of cleaning, structuring, and enriching raw data into a desired format."
-      },
-      {
-          "keyword": "Docker Hub",
-          "description": "A cloud-based registry service for sharing Docker container images."
-      },
-      {
-          "keyword": "Data Parallelism",
-          "description": "A form of parallel computing where the same operation is performed on multiple data simultaneously."
-      },
-      {
-          "keyword": "Dual Boot",
-          "description": "A configuration where a computer has two operating systems and can boot into either."
-      },
-      {
-          "keyword": "Data Visualization",
-          "description": "The graphical representation of information and data (e.g., charts, graphs)."
-      },
-      {
-          "keyword": "Dart Isolate",
-          "description": "A lightweight thread in Dart's concurrency model with its own memory heap."
-      },
-      {
-          "keyword": "Data Normalization",
-          "description": "The process of structuring a database to reduce redundancy and improve integrity."
-      },
-      {
-          "keyword": "Dynamic Link Library (DLL)",
-          "description": "Microsoft's implementation of shared libraries in Windows."
-      },
-      {
-          "keyword": "Data Sovereignty",
-          "description": "The concept that digital data is subject to laws of the country where it's located."
-      },
-      {
-          "keyword": "Dart FFI (Foreign Function Interface)",
-          "description": "A mechanism for Dart code to call native C code."
-      },
-      {
-          "keyword": "Data Mesh",
-          "description": "A decentralized architecture for data management and organizational scaling."
-      },
-      {
-          "keyword": "Domain Name",
-          "description": "A human-readable web address (e.g., google.com) mapped to an IP address via DNS."
-      },
-      {
-          "keyword": "Dart Analyzer",
-          "description": "A static analysis tool for Dart code that identifies errors and warnings."
-      },
-      {
-          "keyword": "Data Annotation",
-          "description": "The process of labeling data to make it usable for machine learning."
-      },
-      {
-          "keyword": "Dynamic Host Configuration Protocol (DHCP)",
-          "description": "A network protocol automatically assigning IP addresses to devices."
-      },
-      {
-          "keyword": "Data Stream",
-          "description": "A continuous flow of data records processed incrementally."
-      },
-      {
-          "keyword": "Dart Pub",
-          "description": "Dart's package manager for sharing and using libraries."
-      },
-      {
-          "keyword": "Data Quality",
-          "description": "The measure of data's fitness to serve its purpose in a given context."
-      },
-      {
-          "keyword": "Digital Twin",
-          "description": "A virtual representation serving as the real-time digital counterpart of a physical object."
-      },
-      {
-          "keyword": "Dart Test",
-          "description": "Dart's built-in testing framework."
-      },
-      {
-          "keyword": "Data Fabric",
-          "description": "An architecture and set of services providing consistent capabilities across hybrid multi-cloud environments."
-      },
-      {
-          "keyword": "Demultiplexer (Demux)",
-          "description": "A circuit taking a single input and selecting one of many outputs."
-      },
-      {
-          "keyword": "Dart Formatter",
-          "description": "A tool that automatically formats Dart code according to style guidelines."
-      },
-      {
-          "keyword": "Data Deduplication",
-          "description": "A technique eliminating duplicate copies of repeating data to improve storage efficiency."
-      },
-      {
-          "keyword": "Docker Volume",
-          "description": "A mechanism for persisting data generated by Docker containers."
-      },
-      {
-          "keyword": "Dart Doc",
-          "description": "Dart's documentation generator that creates API reference docs from code comments."
-      },
-      {
-          "keyword": "Data Virtualization",
-          "description": "An approach allowing applications to retrieve and manipulate data without technical details."
-      },
-      {
-          "keyword": "Dart Build System",
-          "description": "A system for transforming and generating Dart code during development."
-      },
-      {
-          "keyword": "Data Lineage",
-          "description": "The lifecycle of data including origins, movements, characteristics, and transformations."
-      },
-      {
-          "keyword": "Dart Native Extensions",
-          "description": "A mechanism for extending Dart's capabilities with platform-specific code."
-      },
-      {
-          "keyword": "DataOps",
-          "description": "A collaborative data management practice improving communication between data teams."
-      },
-      {
-          "keyword": "Dart Observatory",
-          "description": "A profiling and debugging tool for Dart applications."
-      },
-      {
-          "keyword": "Data Profiling",
-          "description": "The process of examining data for completeness, accuracy, and consistency."
-      },
-      {
-          "keyword": "Dart Code Metrics",
-          "description": "Tools for analyzing Dart code quality and maintainability."
-      },
-      {
-          "keyword": "Data Retention",
-          "description": "Policies determining how long data should be stored before deletion."
-      },
-      {
-          "keyword": "Dart DevTools",
-          "description": "A suite of performance tools for Dart and Flutter development."
-      },
-      {
-          "keyword": "Data Synchronization",
-          "description": "The process of establishing consistency among data across different systems."
-      },
-      {
-          "keyword": "Dart Fix",
-          "description": "A tool for automatically applying fixes to Dart code based on analyzer suggestions."
-      },
-      {
-          "keyword": "Data Transformation",
-          "description": "The process of converting data from one format/structure to another."
-      },
-      {
-          "keyword": "Dart Linter",
-          "description": "A static analysis tool enforcing coding standards in Dart projects."
-      },
-      {
-          "keyword": "Data Validation",
-          "description": "The process of ensuring data is clean, correct, and useful."
-      },
-      {
-          "keyword": "Dart Native Assets",
-          "description": "A mechanism for bundling platform-specific resources with Dart applications."
-      },
-      {
-          "keyword": "Data Versioning",
-          "description": "The practice of tracking and managing changes to datasets over time."
-      },
-      {
-          "keyword": "Dart Platform Interface",
-          "description": "A design pattern for writing platform-agnostic Dart code with platform-specific implementations."
-      },
-      {
-          "keyword": "Data Vault",
-          "description": "A data modeling approach for historical data tracking in data warehouses."
-      },
-      {
-          "keyword": "Dart Plugin",
-          "description": "An extension adding functionality to the Dart development environment."
-      },
-      {
-          "keyword": "Data Ingestion",
-          "description": "The process of importing data from various sources into a system for storage/analysis."
-      },
-      {
-          "keyword": "Dart SDK",
-          "description": "The Software Development Kit containing tools for Dart development."
-      },
-      {
-          "keyword": "Data Partitioning",
-          "description": "The practice of dividing data into subsets for improved performance and manageability."
-      },
-      {
-          "keyword": "Dart Standalone",
-          "description": "Dart programs that run independently outside of browsers."
-      },
-      {
-          "keyword": "Data Persistence",
-          "description": "The characteristic of data that outlives the execution of the program that created it."
-      },
-      {
-          "keyword": "Dart WebAssembly (Wasm)",
-          "description": "Compiling Dart to WebAssembly for web deployment."
-      },
-      {
-          "keyword": "Data Migration",
-          "description": "The process of transferring data between storage types, formats, or systems."
-      },
-      {
-          "keyword": "Dart Web Components",
-          "description": "A way to create reusable custom elements in web applications using Dart."
-      },
-      {
-          "keyword": "Data Compression",
-          "description": "The process of encoding information using fewer bits to reduce storage/transmission requirements."
-      },
-      {
-          "keyword": "Dart Web Server",
-          "description": "A server-side application written in Dart for handling HTTP requests."
-      },
-      {
-          "keyword": "Data Consistency",
-          "description": "The property ensuring all data copies in a distributed system are identical at all times."
-      },
-      {
-          "keyword": "Dart Web Starter",
-          "description": "Templates and tools for bootstrapping Dart web applications."
-      },
-      {
-          "keyword": "Data Classification",
-          "description": "The process of organizing data into categories for efficient use and protection."
-      },
-      {
-          "keyword": "Dart Web Toolkit",
-          "description": "Libraries and tools for building web applications with Dart."
-      },
-      {
-          "keyword": "Data Archiving",
-          "description": "The process of moving data that is no longer actively used to separate storage for long-term retention."
-      },
-      {
-          "keyword": "Dart Web UI",
-          "description": "A declarative framework for building web user interfaces in Dart."
-      },
-      {
-          "keyword": "Data Aggregation",
-          "description": "The compilation of information from databases with intent to prepare combined datasets for analysis."
-      },
-      {
-          "keyword": "Dart Web Workers",
-          "description": "A mechanism for running Dart scripts in background threads for web applications."
-      },
-      {
-          "keyword": "Data Analytics",
-          "description": "The science of analyzing raw data to make conclusions about information."
-      },
-      {
-          "keyword": "Dart WebSockets",
-          "description": "A protocol providing full-duplex communication channels over a single TCP connection in Dart web apps."
-      },
-      {
-          "keyword": "Data Binding",
-          "description": "A general technique that binds data sources from the provider and consumer together."
-      },
-      {
-          "keyword": "Dart Web Framework",
-          "description": "A software framework designed to support development of web applications using Dart."
-      },
-      {
-          "keyword": "Data Catalog",
-          "description": "An organized inventory of data assets in an organization."
-      },
-      {
-          "keyword": "Dart Web Components",
-          "description": "A way to create reusable custom elements in web applications using Dart."
-      },
-      {
-          "keyword": "Data Flow",
-          "description": "The movement of data through a system comprising software, hardware, or a combination."
-      },
-      {
-          "keyword": "Dart Web Development",
-          "description": "The process of building web applications using the Dart programming language."
-      },
-      {
-          "keyword": "Data Hierarchy",
-          "description": "The systematic organization of data, often in a tree-like structure."
-      },
-      {
-          "keyword": "Dart Web Application",
-          "description": "An application program that is stored on a remote server and delivered over the Internet through a browser interface, written in Dart."
-      },
-      
+    {
+      keyword: "Database",
+      description:
+        "An organized collection of structured data stored electronically in a computer system.",
+    },
+    {
+      keyword: "Data Structure",
+      description:
+        "A specialized format for organizing, processing, retrieving and storing data (e.g., arrays, linked lists).",
+    },
+    {
+      keyword: "Debugging",
+      description:
+        "The process of identifying and removing errors from computer hardware or software.",
+    },
+    {
+      keyword: "Deep Learning",
+      description:
+        "A subset of machine learning using artificial neural networks with multiple abstraction layers.",
+    },
+    {
+      keyword: "DNS (Domain Name System)",
+      description:
+        "The hierarchical naming system that translates domain names to IP addresses.",
+    },
+    {
+      keyword: "Distributed System",
+      description:
+        "A system whose components are located on networked computers that communicate to achieve a common goal.",
+    },
+    {
+      keyword: "Docker",
+      description:
+        "A platform for developing, shipping, and running applications in containers.",
+    },
+    {
+      keyword: "Data Mining",
+      description:
+        "The process of discovering patterns in large datasets using machine learning, statistics, and database systems.",
+    },
+    {
+      keyword: "Dijkstra's Algorithm",
+      description:
+        "An algorithm for finding the shortest paths between nodes in a graph.",
+    },
+    {
+      keyword: "Dynamic Programming",
+      description:
+        "A method for solving complex problems by breaking them down into simpler subproblems.",
+    },
+    {
+      keyword: "Data Warehouse",
+      description:
+        "A central repository of integrated data from one or more disparate sources.",
+    },
+    {
+      keyword: "DevOps",
+      description:
+        "A set of practices combining software development (Dev) and IT operations (Ops).",
+    },
+    {
+      keyword: "Digital Signature",
+      description:
+        "A mathematical scheme for verifying the authenticity of digital messages or documents.",
+    },
+    {
+      keyword: "DDoS (Distributed Denial of Service)",
+      description:
+        "A cyberattack where multiple systems flood a target's resources to disrupt service.",
+    },
+    {
+      keyword: "Dart",
+      description:
+        "A client-optimized programming language developed by Google for building mobile, desktop and web apps.",
+    },
+    {
+      keyword: "Data Science",
+      description:
+        "An interdisciplinary field using scientific methods to extract knowledge from structured/unstructured data.",
+    },
+    {
+      keyword: "Dependency Injection",
+      description:
+        "A design pattern where an object receives other objects it depends on (inversion of control).",
+    },
+    {
+      keyword: "Django",
+      description:
+        "A high-level Python web framework encouraging rapid development and clean design.",
+    },
+    {
+      keyword: "Docker Compose",
+      description:
+        "A tool for defining and running multi-container Docker applications.",
+    },
+    {
+      keyword: "Data Lake",
+      description:
+        "A storage repository holding vast amounts of raw data in native format.",
+    },
+    {
+      keyword: "Dual Stack",
+      description:
+        "A networking architecture allowing hosts to simultaneously communicate via IPv4 and IPv6.",
+    },
+    {
+      keyword: "Deadlock",
+      description:
+        "A situation where processes block each other by holding resources needed by another.",
+    },
+    {
+      keyword: "DynamoDB",
+      description: "Amazon's fully managed NoSQL database service.",
+    },
+    {
+      keyword: "Data Modeling",
+      description:
+        "The process of creating a data model for an information system.",
+    },
+    {
+      keyword: "Design Pattern",
+      description:
+        "A general reusable solution to commonly occurring problems in software design.",
+    },
+    {
+      keyword: "Dart VM",
+      description:
+        "The virtual machine that executes Dart code and provides runtime support.",
+    },
+    {
+      keyword: "Data Pipeline",
+      description:
+        "A set of data processing elements connected in series for automated data flow.",
+    },
+    {
+      keyword: "Differential Privacy",
+      description:
+        "A system for publicly sharing data while withholding information about individuals.",
+    },
+    {
+      keyword: "Directive (Programming)",
+      description:
+        "A language construct specifying how a compiler should process input (e.g., #include in C).",
+    },
+    {
+      keyword: "Domain-Driven Design (DDD)",
+      description:
+        "An approach to software development focusing on complex needs by connecting implementation to an evolving model.",
+    },
+    {
+      keyword: "Data Governance",
+      description:
+        "The overall management of availability, usability, integrity, and security of enterprise data.",
+    },
+    {
+      keyword: "Dependency Graph",
+      description:
+        "A directed graph representing dependencies of several objects toward each other.",
+    },
+    {
+      keyword: "Deterministic Algorithm",
+      description:
+        "An algorithm that, given a particular input, will always produce the same output.",
+    },
+    {
+      keyword: "Durable (ACID)",
+      description:
+        "A database property where committed transactions persist even after system failures.",
+    },
+    {
+      keyword: "Data Integrity",
+      description:
+        "The maintenance and assurance of data accuracy and consistency over its lifecycle.",
+    },
+    {
+      keyword: "Datalog",
+      description:
+        "A declarative logic programming language for querying databases.",
+    },
+    {
+      keyword: "Declarative Programming",
+      description:
+        "A paradigm expressing the logic of computation without describing control flow (e.g., SQL).",
+    },
+    {
+      keyword: "Docker Swarm",
+      description: "Docker's native clustering and orchestration tool.",
+    },
+    {
+      keyword: "Dataframe",
+      description:
+        "A 2D labeled data structure with columns of potentially different types (Pandas, R).",
+    },
+    {
+      keyword: "Dynamic Typing",
+      description:
+        "A language feature where type checking is performed at runtime (e.g., Python, JavaScript).",
+    },
+    {
+      keyword: "Denormalization",
+      description:
+        "A database optimization technique adding redundant data to improve read performance.",
+    },
+    {
+      keyword: "Dual Core",
+      description:
+        "A CPU with two complete execution cores per physical processor.",
+    },
+    {
+      keyword: "Data Dictionary",
+      description:
+        "A centralized repository of information about data such as meaning, relationships, origin, usage.",
+    },
+    {
+      keyword: "Dimensional Modeling",
+      description:
+        "A data structure technique optimized for data warehousing tools.",
+    },
+    {
+      keyword: "Duck Typing",
+      description:
+        "A style of dynamic typing where an object's suitability is determined by presence of methods/properties.",
+    },
+    {
+      keyword: "Dockerfile",
+      description:
+        "A text document containing commands to assemble a Docker image.",
+    },
+    {
+      keyword: "Data Cleansing",
+      description:
+        "The process of detecting and correcting corrupt or inaccurate records from datasets.",
+    },
+    {
+      keyword: "Depth-First Search (DFS)",
+      description:
+        "A graph traversal algorithm exploring as far as possible along each branch before backtracking.",
+    },
+    {
+      keyword: "Deployment",
+      description: "The activities making a software system available for use.",
+    },
+    {
+      keyword: "Data Serialization",
+      description:
+        "The process of converting data structures into a storable/transmittable format (e.g., JSON, Protocol Buffers).",
+    },
+    {
+      keyword: "DMA (Direct Memory Access)",
+      description:
+        "A feature allowing hardware subsystems to access memory independently of the CPU.",
+    },
+    {
+      keyword: "Data Federation",
+      description:
+        "An approach integrating multiple databases into a virtual database.",
+    },
+    {
+      keyword: "Dart Native",
+      description:
+        "Dart code compiled to native machine code for mobile/desktop apps.",
+    },
+    {
+      keyword: "Discrete Mathematics",
+      description:
+        "Mathematical structures fundamentally discrete rather than continuous (essential for CS).",
+    },
+    {
+      keyword: "Data Replication",
+      description:
+        "The process of storing data in multiple locations to improve availability and fault tolerance.",
+    },
+    {
+      keyword: "Dependency Management",
+      description:
+        "Tools and processes for handling external libraries/packages a project relies on.",
+    },
+    {
+      keyword: "Dart Web",
+      description: "Dart code compiled to JavaScript for web applications.",
+    },
+    {
+      keyword: "Data Masking",
+      description:
+        "A technique creating structurally similar but inauthentic data for privacy protection.",
+    },
+    {
+      keyword: "Deterministic Finite Automaton (DFA)",
+      description:
+        "A finite state machine accepting/rejecting strings of symbols by running through a state sequence.",
+    },
+    {
+      keyword: "Data Wrangling",
+      description:
+        "The process of cleaning, structuring, and enriching raw data into a desired format.",
+    },
+    {
+      keyword: "Docker Hub",
+      description:
+        "A cloud-based registry service for sharing Docker container images.",
+    },
+    {
+      keyword: "Data Parallelism",
+      description:
+        "A form of parallel computing where the same operation is performed on multiple data simultaneously.",
+    },
+    {
+      keyword: "Dual Boot",
+      description:
+        "A configuration where a computer has two operating systems and can boot into either.",
+    },
+    {
+      keyword: "Data Visualization",
+      description:
+        "The graphical representation of information and data (e.g., charts, graphs).",
+    },
+    {
+      keyword: "Dart Isolate",
+      description:
+        "A lightweight thread in Dart's concurrency model with its own memory heap.",
+    },
+    {
+      keyword: "Data Normalization",
+      description:
+        "The process of structuring a database to reduce redundancy and improve integrity.",
+    },
+    {
+      keyword: "Dynamic Link Library (DLL)",
+      description: "Microsoft's implementation of shared libraries in Windows.",
+    },
+    {
+      keyword: "Data Sovereignty",
+      description:
+        "The concept that digital data is subject to laws of the country where it's located.",
+    },
+    {
+      keyword: "Dart FFI (Foreign Function Interface)",
+      description: "A mechanism for Dart code to call native C code.",
+    },
+    {
+      keyword: "Data Mesh",
+      description:
+        "A decentralized architecture for data management and organizational scaling.",
+    },
+    {
+      keyword: "Domain Name",
+      description:
+        "A human-readable web address (e.g., google.com) mapped to an IP address via DNS.",
+    },
+    {
+      keyword: "Dart Analyzer",
+      description:
+        "A static analysis tool for Dart code that identifies errors and warnings.",
+    },
+    {
+      keyword: "Data Annotation",
+      description:
+        "The process of labeling data to make it usable for machine learning.",
+    },
+    {
+      keyword: "Dynamic Host Configuration Protocol (DHCP)",
+      description:
+        "A network protocol automatically assigning IP addresses to devices.",
+    },
+    {
+      keyword: "Data Stream",
+      description: "A continuous flow of data records processed incrementally.",
+    },
+    {
+      keyword: "Dart Pub",
+      description: "Dart's package manager for sharing and using libraries.",
+    },
+    {
+      keyword: "Data Quality",
+      description:
+        "The measure of data's fitness to serve its purpose in a given context.",
+    },
+    {
+      keyword: "Digital Twin",
+      description:
+        "A virtual representation serving as the real-time digital counterpart of a physical object.",
+    },
+    {
+      keyword: "Dart Test",
+      description: "Dart's built-in testing framework.",
+    },
+    {
+      keyword: "Data Fabric",
+      description:
+        "An architecture and set of services providing consistent capabilities across hybrid multi-cloud environments.",
+    },
+    {
+      keyword: "Demultiplexer (Demux)",
+      description:
+        "A circuit taking a single input and selecting one of many outputs.",
+    },
+    {
+      keyword: "Dart Formatter",
+      description:
+        "A tool that automatically formats Dart code according to style guidelines.",
+    },
+    {
+      keyword: "Data Deduplication",
+      description:
+        "A technique eliminating duplicate copies of repeating data to improve storage efficiency.",
+    },
+    {
+      keyword: "Docker Volume",
+      description:
+        "A mechanism for persisting data generated by Docker containers.",
+    },
+    {
+      keyword: "Dart Doc",
+      description:
+        "Dart's documentation generator that creates API reference docs from code comments.",
+    },
+    {
+      keyword: "Data Virtualization",
+      description:
+        "An approach allowing applications to retrieve and manipulate data without technical details.",
+    },
+    {
+      keyword: "Dart Build System",
+      description:
+        "A system for transforming and generating Dart code during development.",
+    },
+    {
+      keyword: "Data Lineage",
+      description:
+        "The lifecycle of data including origins, movements, characteristics, and transformations.",
+    },
+    {
+      keyword: "Dart Native Extensions",
+      description:
+        "A mechanism for extending Dart's capabilities with platform-specific code.",
+    },
+    {
+      keyword: "DataOps",
+      description:
+        "A collaborative data management practice improving communication between data teams.",
+    },
+    {
+      keyword: "Dart Observatory",
+      description: "A profiling and debugging tool for Dart applications.",
+    },
+    {
+      keyword: "Data Profiling",
+      description:
+        "The process of examining data for completeness, accuracy, and consistency.",
+    },
+    {
+      keyword: "Dart Code Metrics",
+      description: "Tools for analyzing Dart code quality and maintainability.",
+    },
+    {
+      keyword: "Data Retention",
+      description:
+        "Policies determining how long data should be stored before deletion.",
+    },
+    {
+      keyword: "Dart DevTools",
+      description:
+        "A suite of performance tools for Dart and Flutter development.",
+    },
+    {
+      keyword: "Data Synchronization",
+      description:
+        "The process of establishing consistency among data across different systems.",
+    },
+    {
+      keyword: "Dart Fix",
+      description:
+        "A tool for automatically applying fixes to Dart code based on analyzer suggestions.",
+    },
+    {
+      keyword: "Data Transformation",
+      description:
+        "The process of converting data from one format/structure to another.",
+    },
+    {
+      keyword: "Dart Linter",
+      description:
+        "A static analysis tool enforcing coding standards in Dart projects.",
+    },
+    {
+      keyword: "Data Validation",
+      description:
+        "The process of ensuring data is clean, correct, and useful.",
+    },
+    {
+      keyword: "Dart Native Assets",
+      description:
+        "A mechanism for bundling platform-specific resources with Dart applications.",
+    },
+    {
+      keyword: "Data Versioning",
+      description:
+        "The practice of tracking and managing changes to datasets over time.",
+    },
+    {
+      keyword: "Dart Platform Interface",
+      description:
+        "A design pattern for writing platform-agnostic Dart code with platform-specific implementations.",
+    },
+    {
+      keyword: "Data Vault",
+      description:
+        "A data modeling approach for historical data tracking in data warehouses.",
+    },
+    {
+      keyword: "Dart Plugin",
+      description:
+        "An extension adding functionality to the Dart development environment.",
+    },
+    {
+      keyword: "Data Ingestion",
+      description:
+        "The process of importing data from various sources into a system for storage/analysis.",
+    },
+    {
+      keyword: "Dart SDK",
+      description:
+        "The Software Development Kit containing tools for Dart development.",
+    },
+    {
+      keyword: "Data Partitioning",
+      description:
+        "The practice of dividing data into subsets for improved performance and manageability.",
+    },
+    {
+      keyword: "Dart Standalone",
+      description: "Dart programs that run independently outside of browsers.",
+    },
+    {
+      keyword: "Data Persistence",
+      description:
+        "The characteristic of data that outlives the execution of the program that created it.",
+    },
+    {
+      keyword: "Dart WebAssembly (Wasm)",
+      description: "Compiling Dart to WebAssembly for web deployment.",
+    },
+    {
+      keyword: "Data Migration",
+      description:
+        "The process of transferring data between storage types, formats, or systems.",
+    },
+    {
+      keyword: "Dart Web Components",
+      description:
+        "A way to create reusable custom elements in web applications using Dart.",
+    },
+    {
+      keyword: "Data Compression",
+      description:
+        "The process of encoding information using fewer bits to reduce storage/transmission requirements.",
+    },
+    {
+      keyword: "Dart Web Server",
+      description:
+        "A server-side application written in Dart for handling HTTP requests.",
+    },
+    {
+      keyword: "Data Consistency",
+      description:
+        "The property ensuring all data copies in a distributed system are identical at all times.",
+    },
+    {
+      keyword: "Dart Web Starter",
+      description:
+        "Templates and tools for bootstrapping Dart web applications.",
+    },
+    {
+      keyword: "Data Classification",
+      description:
+        "The process of organizing data into categories for efficient use and protection.",
+    },
+    {
+      keyword: "Dart Web Toolkit",
+      description:
+        "Libraries and tools for building web applications with Dart.",
+    },
+    {
+      keyword: "Data Archiving",
+      description:
+        "The process of moving data that is no longer actively used to separate storage for long-term retention.",
+    },
+    {
+      keyword: "Dart Web UI",
+      description:
+        "A declarative framework for building web user interfaces in Dart.",
+    },
+    {
+      keyword: "Data Aggregation",
+      description:
+        "The compilation of information from databases with intent to prepare combined datasets for analysis.",
+    },
+    {
+      keyword: "Dart Web Workers",
+      description:
+        "A mechanism for running Dart scripts in background threads for web applications.",
+    },
+    {
+      keyword: "Data Analytics",
+      description:
+        "The science of analyzing raw data to make conclusions about information.",
+    },
+    {
+      keyword: "Dart WebSockets",
+      description:
+        "A protocol providing full-duplex communication channels over a single TCP connection in Dart web apps.",
+    },
+    {
+      keyword: "Data Binding",
+      description:
+        "A general technique that binds data sources from the provider and consumer together.",
+    },
+    {
+      keyword: "Dart Web Framework",
+      description:
+        "A software framework designed to support development of web applications using Dart.",
+    },
+    {
+      keyword: "Data Catalog",
+      description: "An organized inventory of data assets in an organization.",
+    },
+    {
+      keyword: "Dart Web Components",
+      description:
+        "A way to create reusable custom elements in web applications using Dart.",
+    },
+    {
+      keyword: "Data Flow",
+      description:
+        "The movement of data through a system comprising software, hardware, or a combination.",
+    },
+    {
+      keyword: "Dart Web Development",
+      description:
+        "The process of building web applications using the Dart programming language.",
+    },
+    {
+      keyword: "Data Hierarchy",
+      description:
+        "The systematic organization of data, often in a tree-like structure.",
+    },
+    {
+      keyword: "Dart Web Application",
+      description:
+        "An application program that is stored on a remote server and delivered over the Internet through a browser interface, written in Dart.",
+    },
   ];
 
   const [searchTerm, setSearchTerm] = useState("");
@@ -1597,10 +1716,7 @@ const GlossaryTable = () => {
           name="keywords"
           content="Computer Dictionary, Glossary, Programming, Web Development, Data Science, Cybersecurity, Software, Hardware, Unstop Computer"
         />
-        <link
-          rel="canonical"
-          href="https://unstopcomputer.tech/glossary"
-        />
+        <link rel="canonical" href="https://unstopcomputer.tech/glossary" />
         <meta
           property="og:image"
           content="https://unstopcomputer.tech/Images/logo.png"
@@ -1610,77 +1726,78 @@ const GlossaryTable = () => {
           content="Computer Dictionary | Unstop Computer"
         />
       </Head>
-
-      <div className="container text-center mx-auto px-4 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-blue-700 mb-4">
-          Computer Dictionary
-        </h1>
-        <p className="text-lg text-gray-700">
-          Search and explore key computer science terms including programming,
-          hardware, networking, databases, AI, and more.
-        </p>
-      </div>
-
-      <div className="max-w-screen-lg mx-auto px-4 pb-16">
-        {/* A-Z Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-2 mb-6">
-          {alphabet.map((letter) => (
-            <button
-              key={letter}
-              onClick={() =>
-                setSelectedLetter(letter === selectedLetter ? "" : letter)
-              }
-              className={`px-3 py-1 rounded-md border ${
-                selectedLetter === letter
-                  ? "bg-blue-600 text-white"
-                  : "bg-gray-100 text-gray-800 hover:bg-blue-100"
-              }`}
-            >
-              {letter}
-            </button>
-          ))}
+      <SimpleLayout>
+        <div className="container text-center mx-auto px-4 py-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-blue-700 mb-4">
+            Computer Dictionary
+          </h1>
+          <p className="text-lg text-white">
+            Search and explore key computer science terms including programming,
+            hardware, networking, databases, AI, and more.
+          </p>
         </div>
 
-        {/* Search Bar */}
-        <input
-          type="text"
-          placeholder="Search term..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full px-4 py-3 mb-6 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-300"
-        />
-        <div className="mb-4 text-right text-sm text-gray-600">
-          Showing {filteredTerms.length}{" "}
-          {filteredTerms.length === 1 ? "term" : "terms"}
-        </div>
-        {/* Glossary Table */}
-        <table className="w-full table-auto border border-collapse">
-          <thead>
-            <tr className="bg-blue-100">
-              <th className="text-left px-4 py-2 border">Keyword</th>
-              <th className="text-left px-4 py-2 border">Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredTerms.length > 0 ? (
-              filteredTerms.map((term, index) => (
-                <tr key={index} className="border-t hover:bg-gray-100">
-                  <td className="px-4 py-2 border font-medium">
-                    {term.keyword}
-                  </td>
-                  <td className="px-4 py-2 border">{term.description}</td>
-                </tr>
-              ))
-            ) : (
-              <tr>
-                <td colSpan="2" className="text-center py-4">
-                  No results found.
-                </td>
+        <div className="max-w-screen-lg mx-auto px-4 pb-16">
+          {/* A-Z Filter Buttons */}
+          <div className="flex flex-wrap justify-center gap-2 mb-6">
+            {alphabet.map((letter) => (
+              <button
+                key={letter}
+                onClick={() =>
+                  setSelectedLetter(letter === selectedLetter ? "" : letter)
+                }
+                className={`px-3 py-1 rounded-md border ${
+                  selectedLetter === letter
+                    ? "bg-blue-600 text-white"
+                    : "bg-gray-100 text-gray-800 hover:bg-blue-100"
+                }`}
+              >
+                {letter}
+              </button>
+            ))}
+          </div>
+
+          {/* Search Bar */}
+          <input
+            type="text"
+            placeholder="Search term..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full px-4 py-3 mb-6 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-300"
+          />
+          <div className="mb-4 text-right text-sm text-gray-600">
+            Showing {filteredTerms.length}{" "}
+            {filteredTerms.length === 1 ? "term" : "terms"}
+          </div>
+          {/* Glossary Table */}
+          <table className="w-full table-auto border border-collapse">
+            <thead>
+              <tr className="bg-blue-100">
+                <th className="text-left text-black px-4 py-2 border">Keyword</th>
+                <th className="text-left text-black px-4 py-2 border">Description</th>
               </tr>
-            )}
-          </tbody>
-        </table>
-      </div>
+            </thead>
+            <tbody>
+              {filteredTerms.length > 0 ? (
+                filteredTerms.map((term, index) => (
+                  <tr key={index} className="border-t hover:bg-gray-100">
+                    <td className="px-4 py-2 border font-medium">
+                      {term.keyword}
+                    </td>
+                    <td className="px-4 py-2 border">{term.description}</td>
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td colSpan="2" className="text-center py-4">
+                    No results found.
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+      </SimpleLayout>
     </>
   );
 };

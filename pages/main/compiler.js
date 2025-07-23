@@ -19,16 +19,17 @@ const Card = () => {
         />
       </Head>
 
-      <StyledWrapper className="p-10 pt-0 pb-[100px] m-6  justify-center border-4 shadow-xl shadow-cyan-600 hover:shadow-indigo-700">
+      <StyledWrapper className="p-4 sm:p-6 md:p-10 pt-0 pb-[100px] m-2 sm:m-4 md:m-6 justify-center border-4 shadow-xl shadow-cyan-600 hover:shadow-indigo-700">
         <section className="text-center mt-14 px-4">
-          <h1 className="text-4xl font-bold mb-4">Free Online Code Compiler</h1>
-          <p className="text-lg max-w-3xl mx-auto mb-10 text-gray-600 dark:text-gray-300">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-4">Free Online Code Compiler</h1>
+          <p className="text-base sm:text-lg max-w-3xl mx-auto mb-10 text-gray-600 dark:text-gray-300">
             Instantly write and run code in your browser using our free online
             compiler. Supports HTML/CSS, JavaScript, and Python — no setup or
             installation required.
           </p>
         </section>
-        <div className="flex gap-6 justify-center mb-6">
+
+        <div className="flex flex-wrap gap-6 justify-center mb-6">
           <Link href="/compiler/index.html">
             <div className="notification">
               <div className="notiglow" />
@@ -65,7 +66,6 @@ const Card = () => {
             </div>
           </Link>
         </div>
-        
       </StyledWrapper>
     </SimpleLayout>
   );
@@ -77,17 +77,18 @@ const StyledWrapper = styled.div`
     flex-direction: column;
     isolation: isolate;
     position: relative;
-    width: 18rem;
-    height: 8rem;
+    width: 100%;
+    max-width: 18rem;
+    min-width: 260px;
     background: #29292c;
     border-radius: 1rem;
     overflow: hidden;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-size: 16px;
     --gradient: linear-gradient(to bottom, #2eadff, #3d83ff, #7e61ff);
     --color: #32a6ff;
     cursor: pointer;
+    margin-bottom: 1rem;
   }
 
   .notification:before {
@@ -118,7 +119,7 @@ const StyledWrapper = styled.div`
     color: var(--color);
     padding: 0.65rem 0.25rem 0.4rem 1.25rem;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     transition: transform 300ms ease;
     z-index: 5;
   }
@@ -129,8 +130,9 @@ const StyledWrapper = styled.div`
 
   .notibody {
     color: #99999d;
-    padding: 0 2.25rem;
+    padding: 0 1.25rem 1rem;
     transition: transform 300ms ease;
+    font-size: 0.95rem;
     z-index: 5;
   }
 
@@ -144,11 +146,7 @@ const StyledWrapper = styled.div`
     width: 20rem;
     height: 20rem;
     transform: translate(-50%, -50%);
-    background: radial-gradient(
-      circle closest-side at center,
-      white,
-      transparent
-    );
+    background: radial-gradient(circle closest-side at center, white, transparent);
     opacity: 0;
     transition: opacity 300ms ease;
   }
@@ -161,12 +159,20 @@ const StyledWrapper = styled.div`
     z-index: 1;
   }
 
-  .notification:hover .notiglow {
+  .notification:hover .notiglow,
+  .notification:hover .notiborderglow {
     opacity: 0.1;
   }
 
-  .notification:hover .notiborderglow {
-    opacity: 0.1;
+  @media (max-width: 640px) {
+    .notititle {
+      font-size: 1.1rem;
+    }
+
+    .notibody {
+      font-size: 0.9rem;
+      padding: 0 1rem 1rem;
+    }
   }
 `;
 
