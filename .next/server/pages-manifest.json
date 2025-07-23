@@ -2,6 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/mcq/angularjs-mcq": "pages/mcq/angularjs-mcq.js",
-  "/main/compiler": "pages/main/compiler.js"
+  "/main/compiler": "pages/main/compiler.js",
+  "/roadmap": "pages/roadmap.js",
+  "/roadmap/frontend": "pages/roadmap/frontend.js"
 }

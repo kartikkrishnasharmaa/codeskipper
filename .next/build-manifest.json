@@ -26,6 +26,16 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/main/compiler.js"
+    ],
+    "/roadmap": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/roadmap.js"
+    ],
+    "/roadmap/frontend": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/roadmap/frontend.js"
     ]
   },
   "ampFirstPages": []

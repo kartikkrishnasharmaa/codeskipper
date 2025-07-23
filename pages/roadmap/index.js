@@ -14,7 +14,7 @@ const Home = () => {
       id: 1,
       name: "Frontend",
       category: ["Web Development"],
-      link: "",
+      link: "/roadmap/frontend",
       image: "",
       gradient: "from-green-400 to-blue-500",
     },
