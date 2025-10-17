@@ -103,21 +103,13 @@ const Hero = () => {
                 text: "MCQ",
                 colors: "from-blue-600 to-indigo-700",
               },
-              {
-                href: "/interview-question",
-                text: "Interview Prep",
-                colors: "from-purple-600 to-fuchsia-600",
-              },
+         
               {
                 href: "/test",
                 text: "Test",
                 colors: "from-emerald-600 to-teal-600",
               },
-              {
-                href: "/blog",
-                text: "Articles",
-                colors: "from-amber-500 to-orange-500",
-              },
+           
               {
                 href: "/compiler/index.html",
                 text: "Online Compiler",
