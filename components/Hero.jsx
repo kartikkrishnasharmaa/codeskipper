@@ -144,22 +144,25 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        <motion.div
-          className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 relative z-10 group"
-          initial="hidden"
-          animate="visible"
-          variants={imageVariants}
-        >
-          <div className="relative p-1 bg-gradient-to-tr from-blue-500 to-purple-600 rounded-lg double-border group-hover:scale-105 transform transition-all duration-500 ease-in-out">
-            <Image
-              className="object-cover object-center rounded-lg border-4 border-white group-hover:brightness-110 group-hover:contrast-125 group-hover:rotate-1 transition-all duration-500 ease-in-out"
-              alt="hero-banner"
-              width={550}
-              height={500}
-              src="/Images/hero.webp"
-            />
-          </div>
-        </motion.div>
+     <motion.div
+  className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 relative z-10 group"
+  initial="hidden"
+  animate="visible"
+  variants={imageVariants}
+>
+  <div className="relative p-1 bg-gradient-to-tr from-blue-500 to-purple-600 rounded-lg double-border group-hover:scale-105 transform transition-all duration-500 ease-in-out max-h-[400px]">
+    <div className="relative w-full h-0 pb-[127%] rounded-lg overflow-hidden border-4 border-white">
+      <Image
+        className="absolute top-0 left-0 w-full h-full object-contain object-center group-hover:brightness-110 group-hover:contrast-125 group-hover:scale-105 transition-all duration-500 ease-in-out"
+        alt="hero-banner"
+        src="/Images/kartik.png"
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 550px"
+      />
+    </div>
+  </div>
+</motion.div>
+
       </div>
     </section>
   );
