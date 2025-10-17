@@ -37,9 +37,9 @@ const artificialintelligence = () => {
             <section id="content-wrapper">
                 <div>
                     <div className="relative xl:container">
-                        <h1 className="title-font sm:text-4xl text-center text-3xl mb-2 font-medium text-blue-700">Artificial Intelligence 1 - Multiple Choice Question</h1>
+                        <h1 className="title-font sm:text-4xl text-center text-3xl mb-2 font-medium text-white">Artificial Intelligence 1 - Multiple Choice Question</h1>
 
-                        <div className="space-y-6 py-8 text-base leading-7 text-gray-600">
+                        <div className="space-y-6 py-8 text-base leading-7 text-white">
                             <p className="font-bold">Question 1. What is the full form of AI ?</p>
                             <ul className="space-y-4">
                                 <li className="flex items-center">
@@ -76,13 +76,13 @@ const artificialintelligence = () => {
                                 </li>
                             </ul>
                             <details className=" open:duration-300">
-                                <summary className="bg-gray-200 px-5 py-3 text-lg cursor-pointer">Answer: </summary>
+                                <summary className="bg-gray-200 text-black px-5 py-3 text-lg cursor-pointer">Answer: </summary>
                                 <div className=" px-5 py-3 border border-blue-700 text-sm">
                                     B. Artificial Intelligence
                                 </div>
                             </details>
                         </div>
-                        <div className="space-y-6 py-8 text-base leading-7 text-gray-600">
+                        <div className="space-y-6 py-8 text-base leading-7 text-white">
                             <p className="font-bold">Question 2. What is artificial intelligence </p>
                             <ul className="space-y-4">
                                 <li className="flex items-center">
@@ -119,13 +119,13 @@ const artificialintelligence = () => {
                                 </li>
                             </ul>
                             <details className=" open:duration-300">
-                                <summary className="bg-gray-200 px-5 py-3 text-lg cursor-pointer">Answer:</summary>
+                                <summary className="bg-gray-200 text-black px-5 py-3 text-lg cursor-pointer">Answer:</summary>
                                 <div className=" px-5 py-3 border border-blue-700 text-sm">
                                     D. A field that aims to develop intelligent machines.
                                 </div>
                             </details>
                         </div>
-                        <div className="space-y-6 py-8 text-base leading-7 text-gray-600">
+                        <div className="space-y-6 py-8 text-base leading-7 text-white">
                             <p className="font-bold">Question 3.Who is the inventor of AI ? </p>
                             <ul className="space-y-4">
                                 <li className="flex items-center">
@@ -162,13 +162,13 @@ const artificialintelligence = () => {
                                 </li>
                             </ul>
                             <details className=" open:duration-300">
-                                <summary className="bg-gray-200 px-5 py-3 text-lg cursor-pointer">Answer:</summary>
+                                <summary className="bg-gray-200 text-black px-5 py-3 text-lg cursor-pointer">Answer:</summary>
                                 <div className=" px-5 py-3 border border-blue-700 text-sm">
                                     C. John McCarthy
                                 </div>
                             </details>
                         </div>
-                        <div className="space-y-6 py-8 text-base leading-7 text-gray-600">
+                        <div className="space-y-6 py-8 text-base leading-7 text-white">
                             <p className="font-bold">Question 4. Which of the following is the branch of artificial intelligence ? </p>
                             <ul className="space-y-4">
                                 <li className="flex items-center">
@@ -205,13 +205,13 @@ const artificialintelligence = () => {
                                 </li>
                             </ul>
                             <details className=" open:duration-300">
-                                <summary className="bg-gray-200 px-5 py-3 text-lg cursor-pointer">Answer:</summary>
+                                <summary className="bg-gray-200 text-black px-5 py-3 text-lg cursor-pointer">Answer:</summary>
                                 <div className=" px-5 py-3 border border-blue-700 text-sm">
                                     A. Machine learning
                                 </div>
                             </details>
                         </div>
-                        <div className="space-y-6 py-8 text-base leading-7 text-gray-600">
+                        <div className="space-y-6 py-8 text-base leading-7 text-white">
                             <p className="font-bold">Question 5. ____ is the goal of AI. </p>
                             <ul className="space-y-4">
                                 <li className="flex items-center">
@@ -248,13 +248,13 @@ const artificialintelligence = () => {
                                 </li>
                             </ul>
                             <details className=" open:duration-300">
-                                <summary className="bg-gray-200 px-5 py-3 text-lg cursor-pointer">Answer:</summary>
+                                <summary className="bg-gray-200 text-black px-5 py-3 text-lg cursor-pointer">Answer:</summary>
                                 <div className=" px-5 py-3 border border-blue-700 text-sm">
                                     D. To explain various sort of intelligence
                                 </div>
                             </details>
                         </div>
-                        <div className="space-y-6 py-8 text-base leading-7 text-gray-600">
+                        <div className="space-y-6 py-8 text-base leading-7 text-white">
                             <p className="font-bold">Question 6. Which of the following is an application of AI ? </p>
                             <ul className="space-y-4">
                                 <li className="flex items-center">
@@ -291,13 +291,13 @@ const artificialintelligence = () => {
                                 </li>
                             </ul>
                             <details className=" open:duration-300">
-                                <summary className="bg-gray-200 px-5 py-3 text-lg cursor-pointer">Answer:</summary>
+                                <summary className="bg-gray-200 text-black px-5 py-3 text-lg cursor-pointer">Answer:</summary>
                                 <div className=" px-5 py-3 border border-blue-700 text-sm">
                                     C. Language understanding and problem solving (Text analytics and NLP)
                                 </div>
                             </details>
                         </div>
-                        <div className="space-y-6 py-8 text-base leading-7 text-gray-600">
+                        <div className="space-y-6 py-8 text-base leading-7 text-white">
                             <p className="font-bold">Question 7.Which of the following is a components of AI ? </p>
                             <ul className="space-y-4">
                                 <li className="flex items-center">
@@ -334,13 +334,13 @@ const artificialintelligence = () => {
                                 </li>
                             </ul>
                             <details className=" open:duration-300">
-                                <summary className="bg-gray-200 px-5 py-3 text-lg cursor-pointer">Answer:</summary>
+                                <summary className="bg-gray-200 text-black px-5 py-3 text-lg cursor-pointer">Answer:</summary>
                                 <div className=" px-5 py-3 border border-blue-700 text-sm">
                                     Learning
                                 </div>
                             </details>
                         </div>
-                        <div className="space-y-6 py-8 text-base leading-7 text-gray-600">
+                        <div className="space-y-6 py-8 text-base leading-7 text-white">
                             <p className="font-bold">Question 8.What is the function of an artificial intelligence "Agent" ? </p>
                             <ul className="space-y-4">
                                 <li className="flex items-center">
@@ -377,13 +377,13 @@ const artificialintelligence = () => {
                                 </li>
                             </ul>
                             <details className=" open:duration-300">
-                                <summary className="bg-gray-200 px-5 py-3 text-lg cursor-pointer">Answer:</summary>
+                                <summary className="bg-gray-200 text-black px-5 py-3 text-lg cursor-pointer">Answer:</summary>
                                 <div className=" px-5 py-3 border border-blue-700 text-sm">
                                     Mapping of precept sequences to actions
                                 </div>
                             </details>
                         </div>
-                        <div className="space-y-6 py-8 text-base leading-7 text-gray-600">
+                        <div className="space-y-6 py-8 text-base leading-7 text-white">
                             <p className="font-bold">Question 9. Which of the following is not commonly used programming language of AI ? </p>
                             <ul className="space-y-4">
                                 <li className="flex items-center">
@@ -420,13 +420,13 @@ const artificialintelligence = () => {
                                 </li>
                             </ul>
                             <details className=" open:duration-300">
-                                <summary className="bg-gray-200 px-5 py-3 text-lg cursor-pointer">Answer:</summary>
+                                <summary className="bg-gray-200 text-black px-5 py-3 text-lg cursor-pointer">Answer:</summary>
                                 <div className=" px-5 py-3 border border-blue-700 text-sm">
                                     Perl
                                 </div>
                             </details>
                         </div>
-                        <div className="space-y-6 py-8 text-base leading-7 text-gray-600">
+                        <div className="space-y-6 py-8 text-base leading-7 text-white">
                             <p className="font-bold">Question 10. Which of the following is not an application of artificial intelligence ? </p>
                             <ul className="space-y-4">
                                 <li className="flex items-center">
@@ -463,7 +463,7 @@ const artificialintelligence = () => {
                                 </li>
                             </ul>
                             <details className=" open:duration-300">
-                                <summary className="bg-gray-200 px-5 py-3 text-lg cursor-pointer">Answer:</summary>
+                                <summary className="bg-gray-200 text-black px-5 py-3 text-lg cursor-pointer">Answer:</summary>
                                 <div className=" px-5 py-3 border border-blue-700 text-sm">
                                     D. DBMS
                                 </div>
