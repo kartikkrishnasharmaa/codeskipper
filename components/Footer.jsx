@@ -21,7 +21,22 @@ const Footer = () => {
       <hr className="h-px bg-gray-800 z-10 relative" />
       <div className="container py-24 flex md:items-start lg:items-start md:flex-row flex-wrap flex-col relative z-10">
         <div className="flex-grow flex md:pr-20 lg:ml-80 md:text-left text-left">
+      
           <div className="lg:w-2/4 md:w-1/2 w-full px-4 ml-5">
+            {/* <h2 className="title-font font-extrabold text-white tracking-widest text-xl mb-3">
+              Interview Preparation
+            </h2>
+            <ul className="space-y-2">
+              <li><Link href="/interview-question/android-developer" className="text-white hover:text-gray-400 transition">Android Developer</Link></li>
+              <li><Link href="/interview-question/data-structure" className="text-white hover:text-gray-400 transition">Data Structure</Link></li>
+              <li><Link href="/interview-question/css" className="text-white hover:text-gray-400 transition">CSS</Link></li>
+              <li><Link href="/interview-question/flutter" className="text-white hover:text-gray-400 transition">Flutter</Link></li>
+              <li><Link href="/interview-question/mern-stack" className="text-white hover:text-gray-400 transition">MERN Stack</Link></li>
+              <li><Link href="/interview-question/nodejs" className="text-white hover:text-gray-400 transition">Node Js</Link></li>
+              <li><Link href="/interview-question/python" className="text-white hover:text-gray-400 transition">Python</Link></li>
+            </ul> */}
+          </div>
+             <div className="lg:w-2/4 md:w-1/2 w-full px-4 ml-5">
             <h2 className="title-font font-bold text-white tracking-widest text-xl mb-3">
               UnstopComputer
             </h2>
@@ -33,20 +48,6 @@ const Footer = () => {
               <li><Link href="/main/donate" className="text-white hover:text-gray-400 transition">Support Us</Link></li>
               <li><Link href="/main/privacy-policy" className="text-white hover:text-gray-400 transition">Privacy Policy</Link></li>
               <li><Link href="/main/terms-and-condition" className="text-white hover:text-gray-400 transition">Terms & Conditions</Link></li>
-            </ul>
-          </div>
-          <div className="lg:w-2/4 md:w-1/2 w-full px-4 ml-5">
-            <h2 className="title-font font-extrabold text-white tracking-widest text-xl mb-3">
-              Interview Preparation
-            </h2>
-            <ul className="space-y-2">
-              <li><Link href="/interview-question/android-developer" className="text-white hover:text-gray-400 transition">Android Developer</Link></li>
-              <li><Link href="/interview-question/data-structure" className="text-white hover:text-gray-400 transition">Data Structure</Link></li>
-              <li><Link href="/interview-question/css" className="text-white hover:text-gray-400 transition">CSS</Link></li>
-              <li><Link href="/interview-question/flutter" className="text-white hover:text-gray-400 transition">Flutter</Link></li>
-              <li><Link href="/interview-question/mern-stack" className="text-white hover:text-gray-400 transition">MERN Stack</Link></li>
-              <li><Link href="/interview-question/nodejs" className="text-white hover:text-gray-400 transition">Node Js</Link></li>
-              <li><Link href="/interview-question/python" className="text-white hover:text-gray-400 transition">Python</Link></li>
             </ul>
           </div>
         </div>
