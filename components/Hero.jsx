@@ -62,7 +62,7 @@ const Hero = () => {
       <div className="absolute inset-0 dynamic-bg z-0"></div>
 
       {/* Full width container */}
-      <div className="w-full px-12 py-24 flex md:flex-row flex-col items-center justify-center relative z-10">
+      <div className="w-full px-12 pb-4  flex md:flex-row flex-col items-center justify-center relative z-10">
         <motion.div
           className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
           initial="hidden"
@@ -103,13 +103,13 @@ const Hero = () => {
                 text: "MCQ",
                 colors: "from-blue-600 to-indigo-700",
               },
-         
+
               {
                 href: "/test",
                 text: "Test",
                 colors: "from-emerald-600 to-teal-600",
               },
-           
+
               {
                 href: "/compiler/index.html",
                 text: "Online Compiler",
@@ -136,24 +136,24 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-     <motion.div
-  className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 relative z-10 group"
-  initial="hidden"
-  animate="visible"
-  variants={imageVariants}
->
-  <div className="relative p-1 bg-gradient-to-tr from-blue-500 to-purple-600 rounded-lg double-border group-hover:scale-105 transform transition-all duration-500 ease-in-out max-h-[400px]">
-    <div className="relative w-full h-0 pb-[127%] rounded-lg overflow-hidden border-4 border-white">
-      <Image
-        className="absolute top-0 left-0 w-full h-full object-contain object-center group-hover:brightness-110 group-hover:contrast-125 group-hover:scale-105 transition-all duration-500 ease-in-out"
-        alt="hero-banner"
-        src="/Images/kartik.png"
-        fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 550px"
-      />
-    </div>
-  </div>
-</motion.div>
+        <motion.div
+          className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 relative z-10 group"
+          initial="hidden"
+          animate="visible"
+          variants={imageVariants}
+        >
+          <div className="relative p-1 bg-gradient-to-tr from-blue-500 to-purple-600 rounded-lg double-border group-hover:scale-105 transform transition-all duration-500 ease-in-out max-h-[490px]">
+            <div className="relative w-full h-0 pb-[127%] rounded-lg overflow-hidden border-4 border-white">
+              <Image
+                className="absolute top-0 left-0 w-full h-full object-contain object-center group-hover:brightness-110 group-hover:contrast-125 group-hover:scale-105 transition-all duration-500 ease-in-out"
+                alt="hero-banner"
+                src="/Images/kartik.png"
+                fill
+                sizes="(max-width: 778px) 100vw, (max-width: 1024px) 50vw, 650px"
+              />
+            </div>
+          </div>
+        </motion.div>
 
       </div>
     </section>
