@@ -469,12 +469,6 @@ const artificialintelligence = () => {
                                 </div>
                             </details>
                         </div>
-
-                        <div className="mt-16 grid place-items-center">
-                            <Link href="/mcq/artificial-intelligence-1">
-                                <button className="w-full inline-block px-6 py-2 mb-5 border-2 border-blue-700 text-blue-700 font-medium text-xs leading-normal uppercase rounded focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Next Page</button>
-                            </Link>
-                        </div>
                     </div>
                 </div>
             </section>
