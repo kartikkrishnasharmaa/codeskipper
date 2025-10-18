@@ -117,7 +117,7 @@ const Donate = () => {
           variants={containerVariants}
         >
           <motion.h1
-            className="title-font sm:text-4xl text-center text-3xl mb-10 font-medium text-blue-700"
+            className="title-font sm:text-4xl text-center text-3xl mb-10 font-medium text-white bg-gradient-to-r from-cyan-600 to-blue-600 px-4 py-2 rounded-lg"
             variants={itemVariants}
           >
             Support Unstop Computer
@@ -126,7 +126,7 @@ const Donate = () => {
           <motion.p className="p-2 mb-4 text-lg" variants={itemVariants}>
             At <span className="font-bold">Unstop Computer</span>, we're on a
             mission to make coding education{" "}
-            <span className="text-cyan-600">
+            <span className="text-white font-bold bg-gradient-to-r from-cyan-600 to-blue-600 px-2  rounded">
               accessible, interactive, and fun
             </span>{" "}
             for everyone—from beginners to experienced programmers.
@@ -139,7 +139,7 @@ const Donate = () => {
             <h2 className="title-font text-2xl mb-4 font-medium text-blue-700">
               Why Your Donation Matters
             </h2>
-            <ul className="space-y-3">
+            <ul className="space-y-3 text-blue-700">
               {[
                 "🚀 Expand Resources: Create more high-quality tutorials",
                 "🌍 Build Community: Better tools and community events",
@@ -166,7 +166,7 @@ const Donate = () => {
             <h2 className="title-font text-2xl mb-4 font-medium text-blue-700">
               How You Can Help
             </h2>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-6 text-blue-700">
               {[
                 {
                   emoji: "💖",
@@ -219,11 +219,11 @@ const Donate = () => {
             <h3 className="title-font text-xl mb-3 font-medium text-blue-700">
               Our Promise to You
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-blue-700">
               {[
-                "✅ 100% Transparency: Regular updates on fund usage",
-                "✅ No Paywalls: All content stays free forever",
-                "✅ Your Name in Our Hall of Fame (optional)",
+                "👉 100% Transparency: Regular updates on fund usage",
+                "👉 No Paywalls: All content stays free forever",
+                "👉 Your Name in Our Hall of Fame (optional)",
               ].map((item, index) => (
                 <motion.li
                   key={index}
@@ -237,12 +237,12 @@ const Donate = () => {
             </ul>
           </motion.div>
 
-          <motion.p className="p-2 mt-6 text-center" variants={itemVariants}>
+          <motion.p className="p-2 mt-4 text-center" variants={itemVariants}>
             With gratitude,
             <br />
-            <span className="font-bold">The Unstop Computer Team</span>
+            <span className="font-bold mt-4">The Unstop Computer Team</span>
             <br />
-            <span className="text-blue-600">kartik.thedeveloper@gmail.com</span>
+            <span className="text-white">kartik.thedeveloper@gmail.com</span>
           </motion.p>
 
           {/* Donation Modal */}
@@ -299,7 +299,7 @@ const Donate = () => {
                     className="bg-blue-50 p-4 rounded-lg"
                     variants={upiVariants}
                   >
-                    <h4 className="font-semibold text-center mb-2">
+                    <h4 className="font-semibold text-center text-gray-600 mb-2">
                       Or send directly via UPI
                     </h4>
                     <motion.div
@@ -310,9 +310,9 @@ const Donate = () => {
                         transition: { delay: 0.7 },
                       }}
                     >
-                      <span className="font-mono">9057508560@ptaxis</span>
+                      <span className="font-mono text-gray-700">9057508560@ptaxis</span>
                       <motion.button
-                        className="bg-blue-100 hover:bg-blue-200 px-2 py-1 rounded text-sm"
+                        className="bg-blue-600 hover:bg-blue-500 px-2 py-1 rounded text-sm"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={copyToClipboard}
@@ -323,7 +323,7 @@ const Donate = () => {
                   </motion.div>
 
                   <motion.p
-                    className="text-center text-sm text-gray-500 mt-4"
+                    className="text-center text-sm text-gray-700 mt-4"
                     initial={{ opacity: 0 }}
                     animate={{
                       opacity: 1,
