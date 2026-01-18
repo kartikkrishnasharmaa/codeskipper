@@ -41,12 +41,13 @@ export default function Home() {
   const selectedCategory = coursesData.find(
     (cat) => cat.category === activeCategory
   );
+const openWhatsApp = (message) => {
+  const phone = "91905758560"; // country code + number (no +)
+  const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank"); // ✅ THIS WAS MISSING
+};
 
-  const openWhatsApp = (message) => {
-    const phone = "+91905758560"; // Your WhatsApp number
-    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank");
-  };
+
 
   const openCourseModal = (course) => {
     setLoading(true);
