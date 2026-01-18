@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
-import coursesData from "../data/courses";
+import coursesData from "../../data/courses";
 import SimpleLayout from "@/components/SimpleLayout";
 import {
   FaClock,
