@@ -42,13 +42,13 @@ export default function Home() {
     (cat) => cat.category === activeCategory
   );
 const openWhatsApp = (message) => {
-  const phone = "91905758560"; // country code + number (no +)
-  const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
-  window.open(url, "_blank"); // ✅ THIS WAS MISSING
+  const phone = "91905758560"; // country code + number (NO +, NO spaces)
+  const text = encodeURIComponent(message);
+  const url = `https://wa.me/${phone}?text=${text}`;
+  window.open(url, "_blank");
 };
 
-
-
+// push krdo ab
   const openCourseModal = (course) => {
     setLoading(true);
     setSelectedCourse(course);
