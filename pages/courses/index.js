@@ -326,12 +326,6 @@ const openWhatsApp = (message) => {
                           </span>
                         </div>
                       </div>
-                      <div className="text-right">
-                        <div className="text-xs text-gray-500">EMI Starting at</div>
-                        <div className="font-bold text-gray-900">
-                          ₹{Math.round(course.discountPrice / 12).toLocaleString()}/mo
-                        </div>
-                      </div>
                     </div>
 
                     <div className="flex gap-3">
