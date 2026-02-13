@@ -4,18 +4,6 @@ import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
-  const currentDate = new Date();
-  const lastUpdated = new Date(currentDate.getTime() - 4 * 60 * 60 * 1000);
-
-  const formatLastUpdated = (date) => {
-    const options = {
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    };
-    return date.toLocaleString("en-US", options);
-  };
 
   return (
     <footer
@@ -140,13 +128,6 @@ const Footer = () => {
               </Link>
 
             </div>
-          </div>
-
-          <div className="mt-6 text-sm text-gray-600">
-            <p>
-              <span className="font-semibold">Last Updated:</span>{" "}
-              {formatLastUpdated(lastUpdated)}
-            </p>
           </div>
         </div>
       </div>

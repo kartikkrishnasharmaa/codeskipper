@@ -20,10 +20,10 @@ const quickLinks = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-gray-950 via-blue-950 to-gray-900 text-white overflow-hidden">
+    <section className="relative flex items-center bg-gradient-to-br from-gray-950 via-blue-950 to-gray-900 text-white overflow-hidden">
 
       {/* Background Glow */}
-      <div className="absolute top-[-100px] left-[-100px] w-[400px] h-[400px] bg-cyan-500/20 rounded-full blur-3xl" />
+      <div className="absolute top-[-50px] left-[-100px] w-[400px] h-[400px] bg-cyan-500/20 rounded-full blur-3xl" />
       <div className="absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-purple-500/20 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 py-20 relative z-10">
