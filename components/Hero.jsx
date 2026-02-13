@@ -80,19 +80,29 @@ export default function Hero() {
 
           </div>
 
-          {/* RIGHT SIDE BUTTON COLUMN */}
           <div className="lg:w-1/2 w-full flex justify-center">
             <div className="w-full max-w-md space-y-4">
 
               {quickLinks.map((item, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: 30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2 * index }}
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                    boxShadow: [
+                      "0 0 5px rgba(6, 182, 212, 0.4)",
+                      "0 0 20px rgba(6, 182, 212, 0.8)",
+                      "0 0 5px rgba(6, 182, 212, 0.4)"
+                    ]
+                  }}
+                  transition={{
+                    opacity: { duration: 0.5 },
+                    boxShadow: { duration: 2, repeat: Infinity }
+                  }}
+                  className="rounded-lg"
                 >
                   <Link href={item.link}>
-                    <button className="w-full py-3 rounded-lg bg-white/10 border border-white/20 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 font-medium text-center">
+                    <button className="w-full py-3 rounded-lg bg-white/10 border border-cyan-400 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 font-medium text-center">
                       {item.name}
                     </button>
                   </Link>
