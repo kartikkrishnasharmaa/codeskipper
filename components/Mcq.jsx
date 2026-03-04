@@ -1,9 +1,7 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import TiltCard from "../pages/TiltCard";
 
 const mcqTopics = [
   { title: "HTML", link: "/mcq/html-mcq", image: "/Images/html.png" },
@@ -28,79 +26,70 @@ const mcqTopics = [
   { title: "MongoDB", link: "/mcq/mongodb-mcq", image: "/Images/mongodb.png" },
 ];
 
-const cardVariant = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.1,
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  }),
-  hover: {
-    scale: 1.03,
-    boxShadow: "0 12px 24px rgba(0,0,0,0.1)",
-    transition: { duration: 0.3 },
-  },
-};
-
 const Mcq = () => {
+  const [hovered, setHovered] = useState(null);
+
   return (
-    <section className="bg-white dark:bg-gray-900 text-white body-font py-20 z-10">
-      <div className="container px-5 mx-auto">
-        {/* Title and button */}
-        <div className="flex flex-col items-center justify-center text-center mb-10">
-          <h2 className="p-4 text-gray-900 title-font text-4xl mb-12 font-extrabold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600">
+    <section className="bg-[#ecf0f3] py-24">
+      <div className="max-w-7xl mx-auto px-6">
+
+        {/* Title */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-700">
             Multiple Choice Questions
           </h2>
         </div>
 
-        {/* Grid of cards */}
-        <div className="grid grid-cols-1 gap-8 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {/* Grid */}
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
           {mcqTopics.map((topic, index) => (
-            <TiltCard>
-              <motion.article
-                key={topic.title}
-                custom={index}
-                initial="hidden"
-                animate="visible"
-                whileHover="hover"
-                variants={cardVariant}
-                className="bg-white rounded-2xl p-6 shadow-md flex flex-col items-center"
+            <Link key={topic.title} href={topic.link}>
+              <div
+                onMouseEnter={() => setHovered(index)}
+                onMouseLeave={() => setHovered(null)}
+                className={`cursor-pointer p-8 rounded-3xl text-center transition-all duration-300 bg-[#ecf0f3]
+
+                ${
+                  hovered === index
+                    ? "shadow-[inset_8px_8px_16px_#c5c9cc,inset_-8px_-8px_16px_#ffffff]"
+                    : "shadow-[8px_8px_16px_#c5c9cc,-8px_-8px_16px_#ffffff]"
+                }
+                
+                `}
               >
-                <Link
-                  href={topic.link}
-                  className="flex flex-col items-center w-full h-full justify-between"
-                >
-                  {/* Image */}
-                  <div className="flex flex-col items-center">
+
+                {/* Image */}
+                <div className="flex justify-center mb-6">
+                  <div className="w-20 h-20 flex items-center justify-center rounded-full bg-[#ecf0f3]
+                  shadow-[6px_6px_12px_#c5c9cc,-6px_-6px_12px_#ffffff]">
                     <Image
                       src={topic.image}
-                      width={80}
-                      height={80}
+                      width={60}
+                      height={60}
                       alt={topic.title}
-                      className="rounded-full border border-gray-200 shadow-sm mb-4"
                     />
-                    <h3 className="text-lg font-bold text-gray-800 text-center">
-                      {topic.title}
-                    </h3>
                   </div>
+                </div>
 
-                  {/* Button */}
-                  <div className="w-full mt-6">
-                    <button className="w-full px-4 py-2 border-2 border-blue-400 text-blue-700 font-semibold text-sm uppercase rounded-md hover:bg-blue-100 transition duration-200">
-                      Explore
-                    </button>
-                  </div>
-                </Link>
-              </motion.article>
-            </TiltCard>
+                {/* Title */}
+                <h3 className="text-lg font-semibold text-gray-700 mb-6">
+                  {topic.title}
+                </h3>
+
+                {/* Button */}
+                <button className="px-6 py-2 text-sm font-semibold rounded-xl bg-[#ecf0f3] text-gray-700
+                shadow-[6px_6px_12px_#c5c9cc,-6px_-6px_12px_#ffffff]
+                hover:shadow-[inset_6px_6px_12px_#c5c9cc,inset_-6px_-6px_12px_#ffffff] transition">
+                  Explore
+                </button>
+
+              </div>
+            </Link>
           ))}
+
         </div>
 
-        <hr className="h-px mt-12 bg-blue-200 border-0" />
       </div>
     </section>
   );
