@@ -33,7 +33,7 @@ const Feature = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <h1 className="text-5xl font-bold text-gray-700 mb-6">
-            Code The Future Here
+Why Choose Code Skipper ?
           </h1>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
