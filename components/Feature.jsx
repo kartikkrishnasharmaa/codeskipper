@@ -33,7 +33,7 @@ const Feature = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <h1 className="text-5xl font-bold text-gray-700 mb-6">
-Why Choose Code Skipper ?
+            Why Choose Code Skipper ?
           </h1>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -51,11 +51,10 @@ Why Choose Code Skipper ?
               onMouseLeave={() => setHoveredCard(null)}
               className={`p-10 rounded-3xl transition-all duration-300 
               
-              ${
-                hoveredCard === idx
+              ${hoveredCard === idx
                   ? "shadow-[inset_8px_8px_16px_#c5c9cc,inset_-8px_-8px_16px_#ffffff]"
                   : "shadow-[8px_8px_16px_#c5c9cc,-8px_-8px_16px_#ffffff]"
-              }
+                }
               
               bg-[#ecf0f3]`}
             >
