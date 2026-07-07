@@ -74,7 +74,7 @@ export default function Navbar({ setSidebarOpen }) {
     { name: "Online Course",path: "/courses"},
     { name: "Roadmap", path: "/roadmap" },
     { name: "Test", path: "/test" },
-    {name:"Tools",path:"/tools"},
+    {name:  "Tools",path:"/tools"},
     { name: "Interview", path: "/interview" },
 
 
