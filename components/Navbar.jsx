@@ -73,11 +73,9 @@ export default function Navbar({ setSidebarOpen }) {
     { name: "MCQ",path: "/mcq"},
     { name: "Online Course",path: "/courses"},
     { name: "Roadmap", path: "/roadmap" },
-    { name: "Computer Dictionary", path: "/glossary" },
     { name: "Test", path: "/test" },
     {name:"Tools",path:"/tools"},
     { name: "Interview", path: "/interview" },
-    // { name: "Institute", path: "/institutes" },
 
 
   ];
