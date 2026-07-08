@@ -1,107 +1,270 @@
 "use client";
+
 import Link from "next/link";
 import { useState } from "react";
-
-const stats = [
-  { value: "50K+", label: "Active Coders" },
-  { value: "1K+", label: "Resources" },
-  { value: "50+", label: "Tech Stacks" },
-  { value: "5K+", label: "Success Stories" },
-];
+import {
+  FaArrowRight,
+  FaCheckCircle,
+  FaBookOpen,
+  FaLaptopCode,
+  FaSearch,
+} from "react-icons/fa";
 
 const quickLinks = [
-  { name: "Computer Science MCQ", link: "/mcq" },
-  { name: "Roadmap to Tech World", link: "/roadmap" },
-  { name: "Interview Preparation", link: "/interview" },
-  { name: "Computer Fundamental Terms", link: "/glossary" },
-  { name: "Online Courses - Personal Training", link: "/courses" },
-  { name: "Find Computer Institutes in India", link: "/institute" },
+  { name: "Programming MCQs", link: "/mcq" },
+  { name: "Learning Roadmaps", link: "/roadmap" },
+  { name: "Interview Questions", link: "/interview" },
+  { name: "Computer Glossary", link: "/glossary" },
+  { name: "Online Courses", link: "/courses" },
+  { name: "Training Institutes", link: "/institute" },
+];
+const technologies = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Next.js",
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "Python",
+  "Java",
+  "Power BI",
+  "AI",
 ];
 
 export default function Hero() {
   const [hovered, setHovered] = useState(null);
 
   return (
-    <section className="bg-[#ecf0f3] py-28">
-
+    <section
+      aria-labelledby="hero-heading"
+      className="bg-[#ecf0f3] py-24"
+    >
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-          {/* LEFT SIDE */}
-          <div className="space-y-8">
+          {/* LEFT */}
 
-            {/* Tag */}
-            <div className="inline-block px-6 py-2 rounded-full text-sm font-medium text-gray-700
-            bg-[#ecf0f3] shadow-[6px_6px_12px_#c5c9cc,-6px_-6px_12px_#ffffff]">
-              AI Powered Learning Platform
+          <div>
+
+            {/* Badge */}
+
+            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold text-indigo-700 bg-[#ecf0f3] shadow-[6px_6px_12px_#c5c9cc,-6px_-6px_12px_#ffffff]">
+
+              🚀 AI Powered Learning Platform
+
             </div>
 
             {/* Heading */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-700 leading-tight">
-              Code The <span className="text-indigo-600">Future</span>
+
+            <h1
+              id="hero-heading"
+              className="mt-8 text-5xl lg:text-6xl font-extrabold leading-tight text-gray-800"
+            >
+              Learn{" "}
+              <span className="text-indigo-600">
+                Programming,
+              </span>
+
+              <br />
+
+              AI, Data Science &
+
+              <br />
+
+              Digital Marketing
             </h1>
 
             {/* Description */}
-            <p className="text-gray-600 text-lg leading-relaxed max-w-xl">
-              Learn modern technologies with structured roadmap,
-              interactive coding, and real-world projects.
-              From beginner to advanced — everything in one place.
+
+            <p className="mt-8 text-lg leading-9 text-gray-600 max-w-2xl">
+
+              <strong>CodeSkipper</strong> helps students,
+              developers and professionals learn
+              <strong> Programming, Web Development,
+                Artificial Intelligence, Data Science,
+                Power BI, Cyber Security and Digital Marketing </strong>
+              through structured roadmaps,
+              practical tutorials,
+              interview questions,
+              MCQs,
+              educational tools,
+              projects
+              and career-focused learning resources.
+
             </p>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-4">
+            <p className="mt-5 text-gray-600 leading-8 max-w-2xl">
 
-              {stats.map((item, index) => (
-                <div
-                  key={index}
-                  className="p-6 rounded-2xl text-center bg-[#ecf0f3]
-                  shadow-[8px_8px_16px_#c5c9cc,-8px_-8px_16px_#ffffff]"
-                >
-                  <h3 className="text-2xl font-bold text-gray-700">
-                    {item.value}
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    {item.label}
-                  </p>
-                </div>
-              ))}
+              Whether you're starting your coding journey
+              or preparing for your next tech job,
+              CodeSkipper provides step-by-step learning
+              with practical examples that help you build
+              real-world skills.
+
+            </p>
+
+            {/* Buttons */}
+
+            <div className="mt-10 flex flex-wrap gap-5">
+
+              <Link href="/roadmap">
+
+                <button className="flex items-center gap-3 px-7 py-4 rounded-xl font-semibold text-white bg-indigo-600 hover:bg-indigo-700 transition">
+
+                  Start Learning
+
+                  <FaArrowRight />
+
+                </button>
+
+              </Link>
+
+              <Link href="/courses">
+
+                <button className="px-7 py-4 rounded-xl font-semibold text-gray-700 bg-[#ecf0f3] shadow-[6px_6px_12px_#c5c9cc,-6px_-6px_12px_#ffffff] hover:shadow-[inset_6px_6px_12px_#c5c9cc,inset_-6px_-6px_12px_#ffffff] transition">
+
+                  Explore Courses
+
+                </button>
+
+              </Link>
 
             </div>
 
+            {/* Trust */}
+
+
+
           </div>
+          <div>
+            {/* RIGHT SIDE */}
+            <div
+              className="mb-8 p-8 rounded-3xl
+bg-gradient-to-r
+from-indigo-600
+to-blue-600
+text-white">
 
-          {/* RIGHT SIDE */}
-         
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <h2 className="text-2xl font-bold">
 
-            {quickLinks.map((item, index) => (
-              <Link key={index} href={item.link}>
+                Start Your Tech Career
 
-                <div
-                  onMouseEnter={() => setHovered(index)}
-                  onMouseLeave={() => setHovered(null)}
-                  className={`p-6 rounded-2xl cursor-pointer transition text-center
-                  bg-[#ecf0f3]
+              </h2>
 
-                  ${
-                    hovered === index
-                      ? "shadow-[inset_8px_8px_16px_#c5c9cc,inset_-8px_-8px_16px_#ffffff]"
-                      : "shadow-[8px_8px_16px_#c5c9cc,-8px_-8px_16px_#ffffff]"
-                  }
+              <p className="mt-4 opacity-90">
 
-                  `}
-                >
+                Learn programming through structured roadmaps,
+                practical projects,
+                coding exercises,
+                MCQs,
+                interview questions
+                and career-focused learning resources.
 
-                  <p className="text-gray-700 font-semibold">
-                    {item.name}
-                  </p>
+              </p>
+
+              <div className="mt-6 flex gap-3 flex-wrap">
+
+                <span className="bg-white/20 px-4 py-2 rounded-full">
+
+                  Roadmaps
+
+                </span>
+
+                <span className="bg-white/20 px-4 py-2 rounded-full">
+
+                  Projects
+
+                </span>
+
+                <span className="bg-white/20 px-4 py-2 rounded-full">
+
+                  Interview
+
+                </span>
+
+              </div>
+              <div className="mt-10">
+
+                <h3 className="text-2xl font-bold">
+
+                  Popular Technologies
+
+                </h3>
+
+                <div className="flex flex-wrap mt-4 gap-3">
+
+                  {technologies.map((tech) => (
+
+                    <span
+                      key={tech}
+                      className="bg-white/20 px-4 py-2 rounded-full"
+                    >
+
+                      {tech}
+
+                    </span>
+
+                  ))}
 
                 </div>
 
-              </Link>
-            ))}
+              </div>
 
+            </div>
+            <div className="grid grid-cols-2 gap-4 mt-12">
+
+              <div className="flex items-center gap-3">
+
+                <FaCheckCircle className="text-green-500" />
+
+                <span className="text-gray-700">
+
+                  Beginner Friendly
+
+                </span>
+
+              </div>
+
+              <div className="flex items-center gap-3">
+
+                <FaBookOpen className="text-indigo-500" />
+
+                <span className="text-gray-700">
+
+                  Practical Learning
+
+                </span>
+
+              </div>
+
+              <div className="flex items-center gap-3">
+
+                <FaLaptopCode className="text-pink-500" />
+
+                <span className="text-gray-700">
+
+                  Career Focused
+
+                </span>
+
+              </div>
+
+              <div className="flex items-center gap-3">
+
+                <FaCheckCircle className="text-green-500" />
+
+                <span className="text-gray-700">
+
+                  Interview Preparation
+
+                </span>
+
+              </div>
+
+            </div>
           </div>
 
         </div>
