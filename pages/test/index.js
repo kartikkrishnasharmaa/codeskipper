@@ -4,7 +4,7 @@ import Link from "next/link";
 import SimpleLayout from "@/components/SimpleLayout";
 import { useRouter } from "next/router";
 
-// ─── Icons (inline SVGs for performance) ──────────────────────────────────────
+// ─── Icons (inline SVGs for performancee) ──────────────────────────────────────
 const Icons = {
     networking: (
         <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
